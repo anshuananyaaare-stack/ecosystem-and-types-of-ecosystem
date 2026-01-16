@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anshu | Ecosystem and Types of Ecosystem</title>
+
+  <!-- ✅ CSS INSIDE SAME FILE -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5fff5;
+      color: #1f2d1f;
+    }
+
+    /* NAVBAR */
+    header {
+      background: #0b6b3a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      position: relative;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(to right, #0b6b3a, #37a34a);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      max-width: 750px;
+      margin: 0 auto 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background: white;
+      color: #0b6b3a;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* CARDS */
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 18px 0;
+      border-radius: 14px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+      color: #0b6b3a;
+      margin-bottom: 12px;
+    }
+
+    .card h3, .card h4 {
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #eaffea;
+      padding: 12px;
+      border-left: 5px solid #0b6b3a;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    /* QUIZ */
+    .quiz-box {
+      background: #f2fff2;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 10px 0;
+    }
+
+    .quiz-box button {
+      margin: 6px 5px 0 0;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #0b6b3a;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .quiz-box button:hover {
+      background: #088032;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #0b6b3a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* RESPONSIVE NAVBAR */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0b6b3a;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 220px;
+        padding: 15px;
+        border-radius: 0 0 0 12px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🌿 Ecosystem | Anshu</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#meaning">Meaning</a></li>
+        <li><a href="#components">Components</a></li>
+        <li><a href="#types">Types</a></li>
+        <li><a href="#foodchain">Food Chain</a></li>
+        <li><a href="#importance">Importance</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- ✅ HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Ecosystem and Types of Ecosystem</h1>
+      <p>
+        A high-impact natural system where living organisms and non-living factors align together,
+        creating balance, energy flow, and survival across the planet.
+      </p>
+      <a href="#meaning" class="btn">Start Learning</a>
+    </div>
+  </section>
+
+  <!-- ✅ CONTENT -->
+  <main class="container">
+
+    <!-- ✅ MEANING -->
+    <section class="card" id="meaning">
+      <h2>1) Meaning of Ecosystem</h2>
+      <p>
+        An <b>ecosystem</b> is a natural unit where <b>living organisms</b> (plants, animals, microorganisms)
+        interact with <b>non-living components</b> (air, water, soil, sunlight) in a particular area.
+      </p>
+      <p>
+        These interactions create a stable environment by maintaining <b>energy flow</b> and <b>nutrient cycling</b>.
+      </p>
+    </section>
+
+    <!-- ✅ COMPONENTS -->
+    <section class="card" id="components">
+      <h2>2) Components of Ecosystem</h2>
+
+      <h3>✅ A) Biotic Components (Living)</h3>
+      <ul>
+        <li><b>Producers:</b> Green plants and algae (photosynthesis)</li>
+        <li><b>Consumers:</b> Animals depend on other organisms</li>
+        <li><b>Decomposers:</b> Bacteria and fungi break down dead matter</li>
+      </ul>
+
+      <h3>✅ B) Abiotic Components (Non-Living)</h3>
+      <ul>
+        <li>Sunlight</li>
+        <li>Air</li>
+        <li>Water</li>
+        <li>Soil and minerals</li>
+        <li>Temperature</li>
+        <li>Humidity</li>
+      </ul>
+    </section>
+
+    <!-- ✅ TYPES -->
+    <section class="card" id="types">
+      <h2>3) Types of Ecosystem</h2>
+
+      <h3>✅ A) Natural Ecosystem</h3>
+      <p>Natural ecosystems are formed by nature without human influence.</p>
+
+      <h4>1) Terrestrial Ecosystem (Land Ecosystem)</h4>
+      <ul>
+        <li><b>Forest Ecosystem:</b> High rainfall, large trees, rich biodiversity</li>
+        <li><b>Grassland Ecosystem:</b> Grass dominates, grazing animals</li>
+        <li><b>Desert Ecosystem:</b> Very little rainfall, cactus, camels</li>
+        <li><b>Tundra Ecosystem:</b> Extremely cold climate, frozen soil, mosses</li>
+        <li><b>Mountain Ecosystem:</b> High altitude, unique plants & animals</li>
+      </ul>
+
+      <h4>2) Aquatic Ecosystem (Water Ecosystem)</h4>
+      <ul>
+        <li><b>Freshwater Ecosystem:</b> Rivers, ponds, lakes</li>
+        <li><b>Marine Ecosystem:</b> Seas and oceans</li>
+        <li><b>Estuarine Ecosystem:</b> River meets sea (mixed water)</li>
+      </ul>
+
+      <h3>✅ B) Artificial Ecosystem</h3>
+      <p>Artificial ecosystems are created and managed by humans.</p>
+      <ul>
+        <li>Aquarium</li>
+        <li>Crop fields (Agricultural ecosystem)</li>
+        <li>Gardens and parks</li>
+        <li>Man-made ponds</li>
+      </ul>
+    </section>
+
+    <!-- ✅ FOOD CHAIN -->
+    <section class="card" id="foodchain">
+      <h2>4) Food Chain and Food Web</h2>
+
+      <h3>✅ Food Chain</h3>
+      <p>A <b>food chain</b> shows energy transfer from one organism to another.</p>
+      <div class="highlight">
+        Example: 🌱 Grass → 🦗 Grasshopper → 🐸 Frog → 🐍 Snake → 🦅 Eagle
+      </div>
+
+      <h3>✅ Food Web</h3>
+      <p>
+        A <b>food web</b> is the network of interconnected food chains.
+        It makes the ecosystem more stable.
+      </p>
+    </section>
+
+    <!-- ✅ IMPORTANCE -->
+    <section class="card" id="importance">
+      <h2>5) Importance of Ecosystem</h2>
+      <ul>
+        <li>Maintains balance in nature</li>
+        <li>Supports biodiversity</li>
+        <li>Provides clean air and oxygen</li>
+        <li>Helps in nutrient recycling</li>
+        <li>Controls climate and temperature</li>
+        <li>Provides food, shelter, and water</li>
+      </ul>
+    </section>
+
+    <!-- ✅ QUIZ -->
+    <section class="card" id="quiz">
+      <h2>6) Quick Quiz (Test Yourself)</h2>
+
+      <div class="quiz-box">
+        <p><b>Q1:</b> What are producers in an ecosystem?</p>
+        <button onclick="checkAnswer('q1', 'a')">A) Green plants</button>
+        <button onclick="checkAnswer('q1', 'b')">B) Animals</button>
+        <button onclick="checkAnswer('q1', 'c')">C) Fungi</button>
+        <p id="q1-result" class="result"></p>
+      </div>
+
+      <div class="quiz-box">
+        <p><b>Q2:</b> Which is a marine ecosystem?</p>
+        <button onclick="checkAnswer('q2', 'a')">A) Lake</button>
+        <button onclick="checkAnswer('q2', 'b')">B) Ocean</button>
+        <button onclick="checkAnswer('q2', 'c')">C) Pond</button>
+        <p id="q2-result" class="result"></p>
+      </div>
+
+      <div class="quiz-box">
+        <p><b>Q3:</b> Decomposers help in:</p>
+        <button onclick="checkAnswer('q3', 'a')">A) Photosynthesis</button>
+        <button onclick="checkAnswer('q3', 'b')">B) Breaking down dead matter</button>
+        <button onclick="checkAnswer('q3', 'c')">C) Making sunlight</button>
+        <p id="q3-result" class="result"></p>
+      </div>
+    </section>
+
+    <!-- ✅ SUMMARY -->
+    <section class="card" id="summary">
+      <h2>✅ Summary</h2>
+      <p>
+        Ecosystem is a natural system where organisms interact with each other and with non-living factors.
+        It has biotic and abiotic components. Ecosystems can be natural (terrestrial and aquatic) or artificial.
+        Food chains and food webs show energy flow. Ecosystems are essential for life on Earth.
+      </p>
+      <p><b>Website created by Anshu ✅</b></p>
+    </section>
+
+  </main>
+
+  <!-- ✅ FOOTER -->
+  <footer class="footer">
+    <p>Made by Anshu | Ecosystem Website 🌿</p>
+  </footer>
+
+  <!-- ✅ JAVASCRIPT INSIDE SAME FILE -->
+  <script>
+    function toggleMenu() {
+      let navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+
+    function checkAnswer(question, answer) {
+      let result = document.getElementById(question + "-result");
+
+      if (question === "q1") {
+        if (answer === "a") {
+          result.innerHTML = "✅ Correct! Producers are green plants.";
+          result.style.color = "green";
+        } else {
+          result.innerHTML = "❌ Wrong! Correct answer: Green plants.";
+          result.style.color = "red";
+        }
+      }
+
+      if (question === "q2") {
+        if (answer === "b") {
+          result.innerHTML = "✅ Correct! Ocean is a marine ecosystem.";
+          result.style.color = "green";
+        } else {
+          result.innerHTML = "❌ Wrong! Correct answer: Ocean.";
+          result.style.color = "red";
+        }
+      }
+
+      if (question === "q3") {
+        if (answer === "b") {
+          result.innerHTML = "✅ Correct! Decomposers break down dead matter.";
+          result.style.color = "green";
+        } else {
+          result.innerHTML = "❌ Wrong! Correct answer: Breaking down dead matter.";
+          result.style.color = "red";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
